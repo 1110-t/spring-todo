@@ -50,8 +50,8 @@ public class SecurityConfig {
 //    @Bean
 //    public UserDetailsManager userDetailsService(){
 //        JdbcUserDetailsManager users = new JdbcUserDetailsManager(this.dataSource);
-//        // データベースにuser/userというレコードが追加されます
-//        UserDetails user = User.withUsername("user")
+//        // データベースにuser1/userというレコードが追加されます
+//        UserDetails user = User.withUsername("user1")
 //                .password(
 //                PasswordEncoderFactories
 //                        .createDelegatingPasswordEncoder()
@@ -61,10 +61,10 @@ public class SecurityConfig {
 //        users.createUser(user);
 //        return users;
 //    }
-    // shokuhou/misakiでログインする
+    // user1/userでログインする
     @Bean
     public UserDetailsManager userDetailsService(){
-        // 既存User : user/user
+        // 既存User : user1/user
         JdbcUserDetailsManager users = new JdbcUserDetailsManager(this.dataSource);
         return users;
     }
